@@ -5,21 +5,21 @@
 class Yoke < Formula
   desc "Domain intelligence in one pass — DNS, WHOIS, SSL, security, tech stack, performance, breaches, and AI analysis"
   homepage "https://yoke.lol"
-  version "1.5.0"
+  version "1.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/yokedotlol/yoke/releases/download/v1.5.0/yoke_1.5.0_darwin_amd64.tar.gz"
-      sha256 "2e1d00dceca8c8ba1c6e96f2a56930e7f27f0a1f5e9a78d6e02c980b7efb62bc"
+      url "https://github.com/yokedotlol/yoke/releases/download/v1.6.0/yoke_1.6.0_darwin_amd64.tar.gz"
+      sha256 "b30c0ed1dfa74e4ae8e79b4335498cb867f37025b04ca2d2a84f39c3f83c5f10"
 
       define_method(:install) do
         bin.install "yoke"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/yokedotlol/yoke/releases/download/v1.5.0/yoke_1.5.0_darwin_arm64.tar.gz"
-      sha256 "011d6bef27ea7a9d62e8f2dcdfdc3419644cd5b7814170b033a82647f059e153"
+      url "https://github.com/yokedotlol/yoke/releases/download/v1.6.0/yoke_1.6.0_darwin_arm64.tar.gz"
+      sha256 "ff24fc2074aeb4b1ff14b25f18cd8c38080dcfe0cfdf02381255f98b34b1a6ff"
 
       define_method(:install) do
         bin.install "yoke"
@@ -29,15 +29,15 @@ class Yoke < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yokedotlol/yoke/releases/download/v1.5.0/yoke_1.5.0_linux_amd64.tar.gz"
-      sha256 "3175f7827adacb80347b20ab39a70f143843c40aa3cbf363606d6021aab3884a"
+      url "https://github.com/yokedotlol/yoke/releases/download/v1.6.0/yoke_1.6.0_linux_amd64.tar.gz"
+      sha256 "0dbf085b25a7a063ee2eb014f05df0a0ba1257877388a4ac3c72961b3481d4dc"
       define_method(:install) do
         bin.install "yoke"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yokedotlol/yoke/releases/download/v1.5.0/yoke_1.5.0_linux_arm64.tar.gz"
-      sha256 "b417f4ccc6a45b5db97cb14ade5d65adc877193343178a7f49a7e2d1cc83f748"
+      url "https://github.com/yokedotlol/yoke/releases/download/v1.6.0/yoke_1.6.0_linux_arm64.tar.gz"
+      sha256 "01532230cd6595ec611eb883a4ddf27d39e450efd85632f7116c7292ba5edd1c"
       define_method(:install) do
         bin.install "yoke"
       end
