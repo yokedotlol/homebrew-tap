@@ -5,21 +5,21 @@
 class Certs < Formula
   desc "Fast, local TLS scanning. Same engine as certs.lol."
   homepage "https://certs.lol"
-  version "1.2.0"
+  version "1.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/yokedotlol/certs-lol/releases/download/v1.2.0/certs_darwin_amd64.tar.gz"
-      sha256 "920458369643d4d9154ed8c023cf054e06f33c14f53de72f6eb94ed30c702204"
+      url "https://github.com/yokedotlol/certs-lol/releases/download/v1.3.0/certs_darwin_amd64.tar.gz"
+      sha256 "1d98f5b774964ace2244b9c06622ed88da9b98d4464beda96753aca332b4cd1f"
 
       define_method(:install) do
         bin.install "certs"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/yokedotlol/certs-lol/releases/download/v1.2.0/certs_darwin_arm64.tar.gz"
-      sha256 "cc5d141132d2bf3efc63abccf50a0110d105281cd32031ec5cdf41bd8b5e910e"
+      url "https://github.com/yokedotlol/certs-lol/releases/download/v1.3.0/certs_darwin_arm64.tar.gz"
+      sha256 "0e2b19d1d913d302ba338f72612510c01a8923ad4d492db4fd41eaa1e0fba148"
 
       define_method(:install) do
         bin.install "certs"
@@ -29,15 +29,15 @@ class Certs < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yokedotlol/certs-lol/releases/download/v1.2.0/certs_linux_amd64.tar.gz"
-      sha256 "eeba0e63d7c3b466be74433772c87a09403530de14cfa2f08e3e996b2c33b3f0"
+      url "https://github.com/yokedotlol/certs-lol/releases/download/v1.3.0/certs_linux_amd64.tar.gz"
+      sha256 "90d51faa151a4c01637a2f76b405e9b913b3761f060afdd75a04bf77373af710"
       define_method(:install) do
         bin.install "certs"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yokedotlol/certs-lol/releases/download/v1.2.0/certs_linux_arm64.tar.gz"
-      sha256 "85d393421e38d6316d3e1c375edd293093ff373d2ee61468993dc3e335f560fd"
+      url "https://github.com/yokedotlol/certs-lol/releases/download/v1.3.0/certs_linux_arm64.tar.gz"
+      sha256 "295323e5ee1087f33346e8a6b74eec29867acd7a46c55d77249ed82b66b0d7d4"
       define_method(:install) do
         bin.install "certs"
       end
