@@ -5,21 +5,21 @@
 class Ns < Formula
   desc "Fast, API-first DNS lookup. Same engine as ns.lol."
   homepage "https://ns.lol"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/yokedotlol/ns-lol/releases/download/v0.1.1/ns_darwin_amd64.tar.gz"
-      sha256 "06f8936c234b930c4769015a11819ee2c8b8c28b1c6a60bf25e451b2a00fa0fe"
+      url "https://github.com/yokedotlol/ns-lol/releases/download/v0.2.0/ns_darwin_amd64.tar.gz"
+      sha256 "057efefda4b57b482aaa0338a7157b00cca3273bdc8ccfff1c33a8310601ff6e"
 
       define_method(:install) do
         bin.install "ns"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/yokedotlol/ns-lol/releases/download/v0.1.1/ns_darwin_arm64.tar.gz"
-      sha256 "821867a8fb6d7c1d097ff97d2716f4bc9dcff61fd8324fb2e62810a23ae78e7c"
+      url "https://github.com/yokedotlol/ns-lol/releases/download/v0.2.0/ns_darwin_arm64.tar.gz"
+      sha256 "8dfa16292aeca86c1712e5fe16b47724261baef64e0719a3f865ee0c5ebc4ff4"
 
       define_method(:install) do
         bin.install "ns"
@@ -29,15 +29,15 @@ class Ns < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yokedotlol/ns-lol/releases/download/v0.1.1/ns_linux_amd64.tar.gz"
-      sha256 "2275b533cf0aa5dd08a66455f964c88c267f91a0e652fc32d70ee2227bfc6907"
+      url "https://github.com/yokedotlol/ns-lol/releases/download/v0.2.0/ns_linux_amd64.tar.gz"
+      sha256 "24be4308b5b6fa409aed4febd19bcda464c04b15d2953e20a0213a8d4323cb10"
       define_method(:install) do
         bin.install "ns"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yokedotlol/ns-lol/releases/download/v0.1.1/ns_linux_arm64.tar.gz"
-      sha256 "c475d77db5460c93851e2e4ae55a52c43ccc00c0017aa2c705b356deb93cadc7"
+      url "https://github.com/yokedotlol/ns-lol/releases/download/v0.2.0/ns_linux_arm64.tar.gz"
+      sha256 "2809d0c7c78f3404c280024248e06c286de96ab651e6b87dd6e7647956d48f90"
       define_method(:install) do
         bin.install "ns"
       end
