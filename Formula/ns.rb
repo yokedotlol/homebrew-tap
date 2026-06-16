@@ -11,7 +11,7 @@ class Ns < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/yokedotlol/ns-lol/releases/download/v0.1.0/ns_darwin_amd64.tar.gz"
-      sha256 "d3c412b17c843eee2ca7163098b0592e6f84ededfaf8ecc91321ff75bcd5e17d"
+      sha256 "db1366f7bc7573f04390aa5262c2ba7e2bf853d39068a74ba124f634f8183931"
 
       define_method(:install) do
         bin.install "ns"
@@ -19,7 +19,7 @@ class Ns < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/yokedotlol/ns-lol/releases/download/v0.1.0/ns_darwin_arm64.tar.gz"
-      sha256 "2d8840dd67b66a87a734c43af97b8ee2e290b9aa03d9b779cab8c7632839f132"
+      sha256 "ee573d21bec88627070ddd08ac63d294df9da02ac1207cd93ffcab26934d59e6"
 
       define_method(:install) do
         bin.install "ns"
@@ -30,14 +30,14 @@ class Ns < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/yokedotlol/ns-lol/releases/download/v0.1.0/ns_linux_amd64.tar.gz"
-      sha256 "2d1c3947c9e7eee1adaec03bbe627eaf4bc5db2f21db7ea8f576dd6b30027e37"
+      sha256 "d65a0ec7d3d2383b495b8f7c47f3800072e350e561e65e6b6acd027a51b8c124"
       define_method(:install) do
         bin.install "ns"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/yokedotlol/ns-lol/releases/download/v0.1.0/ns_linux_arm64.tar.gz"
-      sha256 "be2e0e34c9e5d0edbd8573980161bbd73546063236793c233a8d680b880bffa6"
+      sha256 "0e9d7114eb6d24be51707c0e11400a2a0ce43be452200aede3c4f546c26f3d51"
       define_method(:install) do
         bin.install "ns"
       end
